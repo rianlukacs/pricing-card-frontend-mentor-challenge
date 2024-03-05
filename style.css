@@ -1,0 +1,184 @@
+/* this rule with HTML and the asterik is used to keep the child divs inside their parent divs */
+html{
+  box-sizing: border-box; 
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+}
+
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+/* removes the default margins that the browser has from the inspect option when you right-click */
+h2, h4, p {
+  margin: 0;
+}
+
+/* pushes the content away from the edges without adding margins */
+body{
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+#card{
+  width: 600px;
+  height: 400px;
+/* google "box shadow generator css" and choose cssgenerator.org*/
+  box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.35);
+  border-radius: 5px;
+/* instructs the code that since #card is the main container, if there are any parts of the children elements that are sticking out of the main parent container, to hide it. Without this, the top 2 corners will round but the bottom 2 corners will stay sharp because of the separate divs created */
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+#ts{
+  width:100%;
+  height: 45%;
+  padding: 25px;
+}
+
+
+/* affects all (h2) elements from the top section (#ts) */
+#ts h2{
+  color: #2ab2af;
+  margin-bottom: 20px;
+}
+
+/* affects all (h4) elements from the top section (#ts) */
+#ts h4{
+  color: #c0df34;
+  margin-bottom: 15px;
+}
+
+/* affects all (p) elements from the top section (#ts) */
+#ts p{
+  color: #98a6bd;
+  font-size: 0.92rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+#bs{
+  width: 100%;
+  height: 55%;
+  color: white;
+}
+
+
+
+
+
+#bls{
+/* to get the bottom left box and bottom right box to align side by side, you need to assign the display to be inline-block in the CSS. In the HTML code, there cannot be any 'whitespace' between the divs */
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+/* vertical align is the alignment tool used for inline-block to format correctly inside of other divs */
+  vertical-align: top;
+  background-color: #2ab2af;
+  padding: 25px;
+}
+
+button {
+  color: white;
+  background-color: #c0df34;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #a9c42d;
+  transform: scale(1.02);
+}
+
+
+#price{
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+#bls h4 {
+  margin-bottom: 20px;
+}
+
+#price-freq, #price {
+  display: inline-block;
+}
+
+/* position relative is setting this div relative to itself. When we put -3px, it moves the position up ever so slightly to be in the middle of the $29 */
+#price-freq {
+  position: relative;
+  top: -3px;
+  font-size: 0.7rem;
+  opacity: 70%;
+  margin-left: 5px;
+  
+}
+
+#price-container{
+  margin-bottom: 10px;
+}
+
+#bls p{
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+#brs{
+/* to get the bottom left box and bottom right box to align side by side, you need to assign the display to be inline-block in the CSS. In the HTML code, there cannot be any 'whitespace' between the divs */
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  /* vertical align is the alignment tool used for inline-block to format correctly inside of other divs */
+  vertical-align: top;
+  background-color: #2ebfbd;
+  padding: 25px;
+}
+
+#brs ul{
+  padding: 0;
+  list-style: none;
+}
+
+#brs li{
+  font-size: 0.8rem;
+  opacity: 80%;
+  padding: 1.8px;
+}
+
+
+
